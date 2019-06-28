@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Coding Challenge</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Coding Challenge</h1>
+
+    <div id="photos-app">
+      <div class="row">
+        <div class="col-lg-4" v-if="photoIndex < photos.length" v-for="photoIndex in photoToShow">
+          <div class="card">
+            <img class="card-img-top" :src="photos[photoIndex].url" :alt="photos[photoIndex].title">
+            <div class="card-body">
+              <h5 class="card-title">{{photos[photoIndex].title}}</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn-block" target="_blank" :href="photos[photoIndex].thumbnailUrl">go to</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-block" @click="photoToShow += 3">show more</button>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.0/vue-resource.min.js"></script>
+<script src="main.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</html>

@@ -1,0 +1,28 @@
+body{
+	direction: rtl;
+	text-align: right;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-top: 4px solid #f6bf74;
+  border-radius: 3px;
+  margin: 3px;
+}
+.btn {
+  height: 60px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #c69e2d;
+  color: white;
+  box-shadow: 0 1px 16px 0 #ccc;
+  outline: none;
+}
+.btn:hover,
+.btn:active,
+.btn:active:focus,
+.btn:visited,
+.btn:focus {
+  box-shadow: 0 1px 16px 0 #c69e2d;
+  outline: none;
+}
